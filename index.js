@@ -55,12 +55,11 @@ const Demo = () => {
   const [tree, setTree] = useState();
 
   useEffect(() => {
-    console.log('first');
     setTree(treeData);
   }, []);
 
   useEffect(() => {
-    console.log('useEffect 2', tree);
+    console.log(tree);
   }, [tree]);
 
   const onSelect = (selectedKeys, info) => {
@@ -73,10 +72,6 @@ const Demo = () => {
 
   const onDragEnter = (info) => {
     console.log(info);
-    // expandedKeys 需要受控时设置
-    // this.setState({
-    //   expandedKeys: info.expandedKeys,
-    // });
   };
 
   const onDrop = (info) => {
